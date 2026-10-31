@@ -157,7 +157,7 @@ public class Recipe {
         if ((this.name).equals(r.getName())) {
             return true;
         }
-        return true;
+        return false;
     }
 
     /**

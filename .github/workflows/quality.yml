@@ -1,0 +1,43 @@
+
+name: CoffeeMaker Quality Checks
+
+on:
+  push:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: CoffeeMaker
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: maven
+          cache-dependency-path: CoffeeMaker/pom.xml
+
+      - name: Run JUnit regression tests
+        run: bash ./mvnw test
+
+      # Add PIT mutation testing later
+      - name: Run PIT mutation testing
+        run: bash ./mvnw test-compile org.pitest:pitest-maven:mutationCoverage
+
+      # Add PIT report artifact upload later
+      - name: Upload PIT report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pit-report
+          path: target/pit-reports/

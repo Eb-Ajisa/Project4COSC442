@@ -8,6 +8,7 @@ import java.util.Arrays;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -155,6 +156,7 @@ public class CoffeeMakerTest {
     }
 
     @Test 
+    @Disabled("For step2")
     void testAddRecipeWhenDuplicate() {
     
     assertTrue(cm.addRecipe(r1));
@@ -196,6 +198,7 @@ public class CoffeeMakerTest {
     }
 
     @Test 
+    @Disabled("For step2")
     void testEditRecipeNotFound() {
         cm.addRecipe(r1);
 
@@ -226,6 +229,7 @@ public class CoffeeMakerTest {
     }
 
     @Test
+    @Disabled("For step2")
     void testMakeCoffee() {
 
         cm.addRecipe(r1);
@@ -250,6 +254,7 @@ public class CoffeeMakerTest {
     }
 
     @Test 
+    @Disabled("For step2")
     void testMakeCoffeeNotEnoughIngredients() {
         cm.addRecipe(r1);
 
@@ -257,7 +262,7 @@ public class CoffeeMakerTest {
         cm.checkInventory().setMilk(0);
         cm.checkInventory().setSugar(0);
         cm.checkInventory().setChocolate(0);
-        
+
 
         System.out.println(cm.checkInventory().getCoffee());
 

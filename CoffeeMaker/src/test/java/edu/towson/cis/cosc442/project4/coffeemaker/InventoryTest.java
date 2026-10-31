@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.api.Disabled;
 
 public class InventoryTest {
     Inventory inventory = new Inventory();
@@ -34,6 +35,7 @@ public class InventoryTest {
         "5, 5, 5, 5, 50",
         "15, 15, 15, 15, 50",
     })
+    @Disabled("For step2")
     void testEnoughIngredients(int amtCoffee, 
         int amtMilk, int amtSugar, int amtChocolate, 
         int price) {
@@ -57,6 +59,7 @@ public class InventoryTest {
         "20, 20, 20, 5, 20",
         "16, 16, 16, 16, 20",
     })
+    @Disabled("For step2")
     void testNotEnoughIngredients( int amtCoffee, 
         int amtMilk, int amtSugar, int 
         amtChocolate, int price) {

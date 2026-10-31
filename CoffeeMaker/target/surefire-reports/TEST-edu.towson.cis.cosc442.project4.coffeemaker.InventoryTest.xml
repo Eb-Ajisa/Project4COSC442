@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="edu.towson.cis.cosc442.project4.coffeemaker.InventoryTest" time="0.076" tests="23" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="edu.towson.cis.cosc442.project4.coffeemaker.InventoryTest" time="0.082" tests="23" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="25"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-25.0.4.101-hotspot\bin"/>
-    <property name="sun.java.command" value="C:\Users\ebby2\AppData\Local\Temp\surefire10110222566334910121\surefirebooter-20261031125750678_3.jar C:\Users\ebby2\AppData\Local\Temp\surefire10110222566334910121 2026-10-31T12-57-50_494-jvmRun1 surefire-20261031125750678_1tmp surefire_0-20261031125750678_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\ebby2\AppData\Local\Temp\surefire14294973108019284818\surefirebooter-20261031150001504_3.jar C:\Users\ebby2\AppData\Local\Temp\surefire14294973108019284818 2026-10-31T15-00-01_318-jvmRun1 surefire-20261031150001504_1tmp surefire_0-20261031150001504_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\ebby2\Downloads\Project4\CoffeeMaker\target\test-classes;C:\Users\ebby2\Downloads\Project4\CoffeeMaker\target\classes;C:\Users\ebby2\.m2\repository\org\junit\jupiter\junit-jupiter\5.14.3\junit-jupiter-5.14.3.jar;C:\Users\ebby2\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.14.3\junit-jupiter-api-5.14.3.jar;C:\Users\ebby2\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\ebby2\.m2\repository\org\junit\platform\junit-platform-commons\1.14.3\junit-platform-commons-1.14.3.jar;C:\Users\ebby2\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\ebby2\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.14.3\junit-jupiter-params-5.14.3.jar;C:\Users\ebby2\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.14.3\junit-jupiter-engine-5.14.3.jar;C:\Users\ebby2\.m2\repository\org\junit\platform\junit-platform-engine\1.14.3\junit-platform-engine-1.14.3.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\ebby2\AppData\Local\Temp\surefire10110222566334910121\surefirebooter-20261031125750678_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\ebby2\AppData\Local\Temp\surefire14294973108019284818\surefirebooter-20261031150001504_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="25.0.4.1+1-LTS"/>
@@ -60,23 +60,23 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="69.0"/>
   </properties>
-  <testcase name="testGetSugar" classname="edu.towson.cis.cosc442.project4.coffeemaker.InventoryTest" time="0.001"/>
-  <testcase name="testToString" classname="edu.towson.cis.cosc442.project4.coffeemaker.InventoryTest" time="0.003"/>
+  <testcase name="testGetSugar" classname="edu.towson.cis.cosc442.project4.coffeemaker.InventoryTest" time="0.002"/>
+  <testcase name="testToString" classname="edu.towson.cis.cosc442.project4.coffeemaker.InventoryTest" time="0.005"/>
   <testcase name="testSetChocolate(int, int)[1]" classname="edu.towson.cis.cosc442.project4.coffeemaker.InventoryTest" time="0.005"/>
-  <testcase name="testSetChocolate(int, int)[2]" classname="edu.towson.cis.cosc442.project4.coffeemaker.InventoryTest" time="0.001"/>
+  <testcase name="testSetChocolate(int, int)[2]" classname="edu.towson.cis.cosc442.project4.coffeemaker.InventoryTest" time="0.002"/>
   <testcase name="testSetChocolate(int, int)[3]" classname="edu.towson.cis.cosc442.project4.coffeemaker.InventoryTest" time="0.002"/>
-  <testcase name="testGetMilk" classname="edu.towson.cis.cosc442.project4.coffeemaker.InventoryTest" time="0.001"/>
-  <testcase name="testSetMilkNegative" classname="edu.towson.cis.cosc442.project4.coffeemaker.InventoryTest" time="0.001"/>
-  <testcase name="testSetCoffee" classname="edu.towson.cis.cosc442.project4.coffeemaker.InventoryTest" time="0.001"/>
-  <testcase name="testGetCoffee" classname="edu.towson.cis.cosc442.project4.coffeemaker.InventoryTest" time="0.002"/>
-  <testcase name="testNotEnoughIngredients(int, int, int, int, int)[1]" classname="edu.towson.cis.cosc442.project4.coffeemaker.InventoryTest" time="0.012"/>
+  <testcase name="testGetMilk" classname="edu.towson.cis.cosc442.project4.coffeemaker.InventoryTest" time="0.002"/>
+  <testcase name="testSetMilkNegative" classname="edu.towson.cis.cosc442.project4.coffeemaker.InventoryTest" time="0.002"/>
+  <testcase name="testSetCoffee" classname="edu.towson.cis.cosc442.project4.coffeemaker.InventoryTest" time="0.0"/>
+  <testcase name="testGetCoffee" classname="edu.towson.cis.cosc442.project4.coffeemaker.InventoryTest" time="0.001"/>
+  <testcase name="testNotEnoughIngredients(int, int, int, int, int)[1]" classname="edu.towson.cis.cosc442.project4.coffeemaker.InventoryTest" time="0.013"/>
   <testcase name="testNotEnoughIngredients(int, int, int, int, int)[2]" classname="edu.towson.cis.cosc442.project4.coffeemaker.InventoryTest" time="0.001"/>
-  <testcase name="testNotEnoughIngredients(int, int, int, int, int)[3]" classname="edu.towson.cis.cosc442.project4.coffeemaker.InventoryTest" time="0.001"/>
-  <testcase name="testNotEnoughIngredients(int, int, int, int, int)[4]" classname="edu.towson.cis.cosc442.project4.coffeemaker.InventoryTest" time="0.001"/>
-  <testcase name="testNotEnoughIngredients(int, int, int, int, int)[5]" classname="edu.towson.cis.cosc442.project4.coffeemaker.InventoryTest" time="0.003"/>
-  <testcase name="testNotEnoughIngredients(int, int, int, int, int)[6]" classname="edu.towson.cis.cosc442.project4.coffeemaker.InventoryTest" time="0.002"/>
-  <testcase name="testSetMilk" classname="edu.towson.cis.cosc442.project4.coffeemaker.InventoryTest" time="0.002"/>
-  <testcase name="testEnoughIngredients(int, int, int, int, int)[1]" classname="edu.towson.cis.cosc442.project4.coffeemaker.InventoryTest" time="0.002"/>
+  <testcase name="testNotEnoughIngredients(int, int, int, int, int)[3]" classname="edu.towson.cis.cosc442.project4.coffeemaker.InventoryTest" time="0.002"/>
+  <testcase name="testNotEnoughIngredients(int, int, int, int, int)[4]" classname="edu.towson.cis.cosc442.project4.coffeemaker.InventoryTest" time="0.002"/>
+  <testcase name="testNotEnoughIngredients(int, int, int, int, int)[5]" classname="edu.towson.cis.cosc442.project4.coffeemaker.InventoryTest" time="0.002"/>
+  <testcase name="testNotEnoughIngredients(int, int, int, int, int)[6]" classname="edu.towson.cis.cosc442.project4.coffeemaker.InventoryTest" time="0.001"/>
+  <testcase name="testSetMilk" classname="edu.towson.cis.cosc442.project4.coffeemaker.InventoryTest" time="0.001"/>
+  <testcase name="testEnoughIngredients(int, int, int, int, int)[1]" classname="edu.towson.cis.cosc442.project4.coffeemaker.InventoryTest" time="0.001"/>
   <testcase name="testEnoughIngredients(int, int, int, int, int)[2]" classname="edu.towson.cis.cosc442.project4.coffeemaker.InventoryTest" time="0.001"/>
   <testcase name="testGetChocolate" classname="edu.towson.cis.cosc442.project4.coffeemaker.InventoryTest" time="0.001"/>
   <testcase name="testSetCoffeeNegative" classname="edu.towson.cis.cosc442.project4.coffeemaker.InventoryTest" time="0.001"/>

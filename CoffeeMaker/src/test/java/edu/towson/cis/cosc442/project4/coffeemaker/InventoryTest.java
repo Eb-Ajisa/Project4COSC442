@@ -1,0 +1,152 @@
+package edu.towson.cis.cosc442.project4.coffeemaker;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
+import org.junit.jupiter.params.provider.CsvSource;
+
+public class InventoryTest {
+    Inventory inventory = new Inventory();
+    @BeforeEach 
+    void setUp() {
+
+
+        inventory.setCoffee(15);
+        inventory.setMilk(15);
+        inventory.setSugar(15);
+        inventory.setChocolate(15);
+
+
+    }
+
+    @AfterEach 
+    void tearDown() {
+       inventory = null;
+
+
+    }
+    @Test
+    void testEnoughIngredients() {
+        Recipe r = new Recipe();
+        r.setAmtCoffee(5);
+        r.setAmtMilk(5);
+        r.setAmtSugar(5);
+        r.setAmtChocolate(5);
+        r.setPrice(50);
+
+        assertEquals(true, inventory.enoughIngredients(r));
+
+    }
+
+    @ParameterizedTest
+    @CsvSource ({
+        "20, 20, 20, 20, 20",
+        "5, 20, 20, 20, 20",
+        "20, 5, 20, 20, 20",
+        "20, 20, 5, 20, 20",
+        "20, 20, 20, 5, 20",
+    })
+    void testNotEnoughIngredients( int amtCoffee, 
+        int amtMilk, int amtSugar, int 
+        amtChocolate, int price) {
+            Recipe recipe = new Recipe();
+            recipe.setAmtCoffee(amtCoffee);
+            recipe.setAmtMilk(amtMilk);
+            recipe.setAmtSugar(amtSugar);
+            recipe.setAmtChocolate(amtChocolate);
+            recipe.setPrice(price);
+
+        assertEquals(false, inventory.enoughIngredients(recipe));
+    }
+
+    @Test
+    void testGetChocolate() {
+
+        assertEquals(15, inventory.getChocolate());
+
+    }
+
+    @Test
+    void testGetCoffee() {
+        assertEquals(15, inventory.getCoffee());
+    }
+
+    @Test
+    void testGetMilk() {
+        assertEquals(15, inventory.getMilk());
+
+    }
+
+    @Test
+    void testGetSugar() {
+        assertEquals(15, inventory.getSugar());
+
+    }
+
+    @Test
+    void testSetChocolate() {
+
+        inventory.setChocolate(10);
+
+        assertEquals(10, inventory.getChocolate());
+
+    }
+    
+    @Test 
+    void testSetChocolateNegative() {
+        inventory.setChocolate(-5);
+        assertEquals(0, inventory.getChocolate());
+    }
+
+    @Test
+    void testSetCoffee() {
+        inventory.setCoffee(10);
+
+        assertEquals(10, inventory.getCoffee());
+
+    }
+
+    @Test 
+    void testSetCoffeeNegative() {
+        inventory.setCoffee(-5);
+        assertEquals(0, inventory.getCoffee());
+    }
+
+    @Test
+    void testSetMilk() {
+        inventory.setMilk(10);
+
+        assertEquals(10, inventory.getMilk());
+
+    }
+
+    @Test 
+    void testSetMilkNegative() {
+        inventory.setMilk(-5);
+        assertEquals(0, inventory.getMilk());
+    }
+
+    @Test
+    void testSetSugar() {
+        inventory.setSugar(10);
+
+        assertEquals(10, inventory.getSugar());
+    }
+
+    @Test 
+    void testSetSugarNegative() {
+        inventory.setSugar(-5);
+        assertEquals(0, inventory.getSugar());
+    }
+
+    @Test
+    void testToString() {
+        String expected = "Coffee: 15\nMilk: 15\nSugar: 15\nChocolate: 15\n";
+        assertEquals(expected, inventory.toString());
+
+    }
+}

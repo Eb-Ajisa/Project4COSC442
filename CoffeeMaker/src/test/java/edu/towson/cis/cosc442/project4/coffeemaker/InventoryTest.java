@@ -29,14 +29,20 @@ public class InventoryTest {
 
 
     }
-    @Test
-    void testEnoughIngredients() {
+    @ParameterizedTest
+    @CsvSource ({
+        "5, 5, 5, 5, 50",
+        "15, 15, 15, 15, 50",
+    })
+    void testEnoughIngredients(int amtCoffee, 
+        int amtMilk, int amtSugar, int amtChocolate, 
+        int price) {
         Recipe r = new Recipe();
-        r.setAmtCoffee(5);
-        r.setAmtMilk(5);
-        r.setAmtSugar(5);
-        r.setAmtChocolate(5);
-        r.setPrice(50);
+        r.setAmtCoffee(amtCoffee);
+        r.setAmtMilk(amtMilk);
+        r.setAmtSugar(amtSugar);
+        r.setAmtChocolate(amtChocolate);
+        r.setPrice(price);
 
         assertEquals(true, inventory.enoughIngredients(r));
 
@@ -49,6 +55,7 @@ public class InventoryTest {
         "20, 5, 20, 20, 20",
         "20, 20, 5, 20, 20",
         "20, 20, 20, 5, 20",
+        "16, 16, 16, 16, 20",
     })
     void testNotEnoughIngredients( int amtCoffee, 
         int amtMilk, int amtSugar, int 
@@ -87,12 +94,17 @@ public class InventoryTest {
 
     }
 
-    @Test
-    void testSetChocolate() {
+    @ParameterizedTest
+    @CsvSource({
+        "10, 10",
+        "5, 5",
+        "0, 0"
+    })
+    void testSetChocolate(int amount, int expected) {
 
-        inventory.setChocolate(10);
+        inventory.setChocolate(amount);
 
-        assertEquals(10, inventory.getChocolate());
+        assertEquals(expected, inventory.getChocolate());
 
     }
     

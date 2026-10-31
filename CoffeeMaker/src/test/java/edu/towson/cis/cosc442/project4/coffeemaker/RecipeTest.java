@@ -16,6 +16,7 @@ public class RecipeTest {
         Recipe r3 = new Recipe();
         Recipe dup4 = new Recipe();
         Recipe null5 = new Recipe();
+        Recipe r6 = new Recipe();
 
     @BeforeEach 
     void setUp() {
@@ -76,6 +77,8 @@ public class RecipeTest {
     void nullEquals() {
         assertThrows(NullPointerException.class, ()
          -> { null5.equals(null); });
+
+         assertFalse(r6.equals(r1));
     }
 
     @Test

@@ -257,7 +257,7 @@ public class CoffeeMakerTest {
         cm.checkInventory().setMilk(0);
         cm.checkInventory().setSugar(0);
         cm.checkInventory().setChocolate(0);
-        
+
 
         System.out.println(cm.checkInventory().getCoffee());
 
